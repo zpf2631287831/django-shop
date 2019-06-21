@@ -20,7 +20,7 @@ from django.conf.urls import url,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # #跳转到用户模块
-    # url(r'^user/', include("register.urls")),
+    url(r'^user/', include("register.urls",namespace='user')),
     # 跳转到主页模块
     url(r'^', include("z_goods.urls",namespace='shop')),
     # #跳转富文本
